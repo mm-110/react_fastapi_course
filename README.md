@@ -1,2 +1,2 @@
 # react_fastapi_course
-Fastapi and React Simple Project with Login
+Repo to maintain a reference to this copied project - Fastapi and React Simple Project with Login
