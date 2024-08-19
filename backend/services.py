@@ -8,7 +8,7 @@ import fastapi.security as security
 import passlib.hash as hash
 import jwt
 
-import datetime
+import datetime as dt
 
 oauth2schema = security.OAuth2PasswordBearer(tokenUrl="/api/token")
 
@@ -94,7 +94,7 @@ async def update_lead(lead_id: int, lead: schemas.LeadCreate, user: schemas.User
     lead_db.email = lead.email
     lead_db.company = lead.company
     lead_db.note = lead.note
-    lead_db.date_last_update = datetime.datetime.now()
+    lead_db.date_last_update = dt.datetime.now()
 
     db.commit()
     db.refresh(lead_db)
